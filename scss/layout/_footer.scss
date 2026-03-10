@@ -1,0 +1,13 @@
+@use "../foundation/variables" as *;
+
+.l-footer{
+  margin-top: 140px;
+  padding-top: 50px;
+  padding-bottom: 12px;
+  background-color: $color-footer;
+
+  @media(max-width: $bp-sm){
+    margin-top: 96px;
+    padding-top: 40px;
+  }
+}

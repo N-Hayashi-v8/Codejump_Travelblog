@@ -1,0 +1,59 @@
+/* scss/object/project/_global-nav.scss */
+@use "../../foundation/variables" as *;
+
+.p-global-nav{
+  background: $color-nav;
+  height: $global-nav-height;
+
+  > .l-container{
+    height: 100%;
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  @media (max-width: $bp-sm) {
+    > .l-container{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+
+    &__list{
+      width: max-content;
+      min-width: 100%;
+      gap: 60px;
+    }
+
+    &__item{
+      flex: 0 0 auto;
+    }
+  }
+}
+

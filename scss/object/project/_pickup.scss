@@ -1,0 +1,58 @@
+@use "../../foundation/variables" as *;
+
+.p-pickup{
+  padding-top: 32px;
+
+  &__list{
+    display: flex;
+    gap: 24px;
+  }
+
+  &__item{
+    width: calc((100% - 48px) / 3);
+  }
+
+  &__link{
+    display: block;
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  &__image{
+    width: 100%;
+  }
+
+  &__title{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  &__more{
+    margin-top: 14px;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: $bp-sm){
+    &__list{
+      display: block;
+    }
+
+    &__item{
+      width: 100%;
+
+      & + &{
+        margin-top: 30px;
+      }
+    }
+  }
+}

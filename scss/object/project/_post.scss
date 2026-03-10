@@ -1,0 +1,75 @@
+@use "../../foundation/variables" as *;
+
+.p-post-list{
+  flex: 1;
+  min-width: 0;
+}
+
+.p-post{
+  & + &{
+    margin-top: 80px;
+  }
+
+  &__title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__meta-row{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .p-post__link{
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  &__time{
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__category{
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__link{
+    text-decoration: none;
+  }
+
+  &__image{
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  &__excerpt{
+    padding: 0 40px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  &__more{
+    display: table;
+    margin: 24px auto 0;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  @media(max-width: $bp-md){
+    &__excerpt{
+      padding: 0;
+    }
+  }
+
+  @media(max-width: $bp-sm){
+    & + &{
+      margin-top: 64px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* scss/style.scss */
+
+/* Foundation */
+@use "foundation/variables";
+@use "foundation/mixin";
+@use "foundation/base";
+
+/* Layout */
+@use "layout/container";
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer" as l-footer;
+
+/* Object - Component */
+@use "object/component/logo";
+@use "object/component/read-more";
+
+/* Object - Project */
+@use "object/project/global-nav";
+@use "object/project/pickup";
+@use "object/project/post";
+@use "object/project/sidebar";
+@use "object/project/footer" as p-footer;
+
+/* Object - Utility */
+@use "object/utility/u-margin";

@@ -1,0 +1,124 @@
+@use "../../foundation/variables" as *;
+
+
+.p-footer{
+  &__columns{
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+  }
+
+  &__column{
+    min-width: 0;
+    flex: 1;
+    &--about{
+      flex: 1.2;
+    }
+  }
+
+  &__title{
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__text{
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  &__about-list{
+    margin-top: 16px;
+  }
+
+  &__about-item{
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 14px;
+
+    &::before{
+      content: "▶";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    & + &{
+      margin-top: 8px;
+    }
+  }
+
+  &__about-link{
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__menu-list{
+    margin-top: 18px;
+    border-top: 1px solid $color-line;
+  }
+
+  &__menu-item{
+    border-bottom: 1px solid $color-line;
+  }
+
+  &__menu-link{
+    display: block;
+    padding: 14px;
+    font-size: 14px;
+    line-height: 1;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__twitter-box{
+    margin-top: 18px;
+    width: 100%;
+    min-height: 320px;
+
+    .twitter-timeline{
+      display: block;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    iframe{
+      width: 100% !important;
+    }
+  }
+
+  &__copyright{
+    display: block;
+    width: 100%;
+    margin: 60px auto 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  @media(max-width: $bp-sm){
+    &__columns{
+      display: block;
+    }
+
+    &__column{
+      & + &{
+        margin-top: 48px;
+      }
+    }
+
+    &__menu-link{
+      padding: 14px 0;
+    }
+
+    &__twitter-box{
+      min-height: 260px;
+    }
+
+    &__copyright{
+      margin-top: 48px;
+    }
+  }
+}

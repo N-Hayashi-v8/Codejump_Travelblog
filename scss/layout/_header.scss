@@ -1,0 +1,17 @@
+/* scss/layout/_header.scss */
+@use "../foundation/variables" as *;
+
+.l-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $color-white;
+  z-index: 10;
+
+  &__inner{
+    height: $logo-row-height;
+    display: flex;
+    align-items: center;
+  }
+}

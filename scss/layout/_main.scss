@@ -1,0 +1,18 @@
+@use "../foundation/variables" as *;
+
+.l-main{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 56px;
+  }
+
+  @media(max-width: $bp-md){
+    &__inner{
+      display: block;
+      padding-top: 48px;
+    }
+  }
+}
